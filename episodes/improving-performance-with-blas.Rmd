@@ -1,0 +1,68 @@
+---
+title: 'Improving Performance with BLAS'
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- How can I ensure R is running as fast as possible?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Understanding numerical libraries
+- Understanding how R uses numerical libraries
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Introduction
+
+Eking out as much performance as possible with your code may mean going to the 
+low-lying code that does the math.   
+
+
+Numerical libraries are codes that use battle-tested
+algorithms for the fastest math possible, typicaly matrix, or linear algebra, operations.  
+These are written in C or FORTRAN and many higher-level langauages depend on them.   These 
+are often called "BLAS" for [Basic Linear Algebra Subprograms](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms).  
+
+There are several alternatives for these, many commercial or processor-specific. For example Intel
+produces the Math Kernel Library or MKL for Intel processors.   
+
+
+## About Performance 
+
+For us the details are not important, unless you are attempting to get as much performance
+as possible for a computation that otherwise would not complete in many years.  
+For most scripting languages, there is a trade-off you must consider between the 
+time for you to prepare your programs and the amount of time you will actually save.   
+You could spend days improving peformance by 20%, which may save you a few hours of compute
+time that, if you'd run the first slow version, would be done by now.  Best to just 
+try what you have and see how it goes.  As my Brother-in-law from Kentucky says, "sometimes
+you just have to race what you bring to the track."
+
+If you really need performance and you've tried the obvious things, then perhaps the next
+question is, should you be using R or Python?   You need to "profile" your code to find
+where it needs to speed up.  See chapter [23 Measuring performance](https://adv-r.hadley.nz/perf-measure.html)
+in  Wickham's “Advanced R” book.  Here is a lecture on the topic as well. https://dcgerard.github.io/advancedr/07_profiling.html 
+
+
+## Cores and Numerical Libs
+
+DEMO of BLAS using benchmarking software and `htop`
+
+> `htop` free Linux utility to visualize CPU activity, a graphical version of `top`
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+## References
+
+https://cran.r-project.org/web/views/HighPerformanceComputing.html
+
+
