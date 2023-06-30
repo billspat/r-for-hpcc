@@ -61,8 +61,16 @@ DEMO of BLAS using benchmarking software and `htop`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+
 ## References
 
-https://cran.r-project.org/web/views/HighPerformanceComputing.html
+ - https://cran.r-project.org/web/views/HighPerformanceComputing.html
+
+ - Improving R Perfomance by installing optimized BLAS/LAPACK libraries July 25th, 2018. Carlos Santillan
+  https://csantill.github.io/RPerformanceWBLAS/
+  This does not describe 'flexiblas' which our system uses
+  
+ - flexiblas: FlexiBLAS API Interface for R
+  https://cran.r-project.org/web/packages/flexiblas/readme/README.html#installation
 
 
